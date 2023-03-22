@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(19, 18, 18);
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loader {
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: rgb(235, 235, 235);
+}
+
+span {
+    mix-blend-mode: difference;
+}
+
+.loader::after {
+    background-color: rgb(231, 238, 236);
+    position: absolute;
+    content: '';
+    height: calc(100% - 10px);
+    left: 0;
+    top: 4px;
+    width: 25%;
+    z-index: -1;
+    overflow: hidden;
+    animation: slide 4s infinite linear;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(285px);
+    }
+}
