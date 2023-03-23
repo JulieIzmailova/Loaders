@@ -1,0 +1,1 @@
+![ Yin_Yang](Yin_Yang.gif)  [](Yin_Yang.gif)
