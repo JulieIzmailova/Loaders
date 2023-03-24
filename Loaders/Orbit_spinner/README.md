@@ -1,0 +1,1 @@
+![ Orbit_spinner](Orbit_spinner.gif)  [](Orbit_spinner.gif)

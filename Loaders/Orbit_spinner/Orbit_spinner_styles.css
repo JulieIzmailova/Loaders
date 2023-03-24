@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: black;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #21fa455a;
+}
+
+.first {
+    width: 165px;
+    height: 165px;
+    animation: spin 4s linear .2s infinite;
+}
+
+.second {
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear 0s infinite;
+}
+
+.third {
+    width: 90px;
+    height: 90px;
+    animation: spin 2s linear 0s infinite;
+}
+
+.fourth {
+    width: 60px;
+    height: 60px;
+    animation: spin 6s linear 0s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate3d(3, 3, 3, 360deg);
+    }
+    100% {
+        transform: rotate3d(0deg);
+    }
+}
