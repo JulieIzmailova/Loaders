@@ -1,0 +1,1 @@
+![ Goo_assembling](Goo_assembling.gif)  [](Goo_assembling.gif)
