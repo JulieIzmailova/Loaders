@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation: morph 4s infinite linear;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 50%;
+        transform: rotate(0deg);
+        background-color: aquamarine;
+    }
+    50% {
+        border-radius: 0%;
+        transform: rotate(180deg);
+        background-color: rgb(77, 223, 89);
+    }
+    100% {
+        border-radius: 50%;
+        transform: rotate(360deg);
+        background-color: aquamarine;
+    }
+
+}
