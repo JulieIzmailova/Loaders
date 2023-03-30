@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, #05ada5);
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+    animation: spin 0.9s infinite  linear;
+}
+
+@keyframes spin {
+    100% {
+        rotate: 1turn;
+    }
+}
