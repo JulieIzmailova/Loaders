@@ -1,0 +1,123 @@
+body {
+    background-color: rgb(19, 19, 41);
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 800px;
+    position: relative;
+}
+
+.moon {
+    left: 300px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 5;
+    border-radius: 50%;
+    animation: moon 9s infinite linear alternate;
+    background-size: 300% 300%;
+    background: linear-gradient(45deg, rgb(119, 118, 118), rgb(46, 44, 44));
+}
+
+@keyframes moon {
+    0% {
+        filter: blur(2px);
+        transform: rotate(0deg);
+    }
+    50% {
+        filter: blur(1px);
+        transform: rotate(90deg);
+        z-index: 9;
+    }
+
+    100% {
+        filter: blur(2px);
+        transform: rotate(180deg);
+    }
+
+}
+
+.sun {
+    left: 300px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(201,173,13);
+    animation: sun 9s infinite linear alternate;
+}
+
+@keyframes sun {
+    0% {
+        transform: translate(-10px, 10px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+        box-shadow: 0 0 10px 6px rgb(231, 205, 58);
+    }
+    100% {
+        transform: translate(10px, -10px);
+    }
+
+}
+
+.glimpse{
+    left: 314px;
+    top: 447px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    filter: blur(4px);
+    position: absolute;
+    background-color: rgb(201,173,13);
+    animation: glimpse 18s infinite linear normal;
+    z-index: 8;
+}
+
+@keyframes glimpse {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    9%, 12% {
+        transform: translate(0, 0);
+        opacity: 1;
+        box-shadow: 0 0 8px 15px rgb(231, 205, 58);
+    }
+    15%{
+        transform: translate(0, 0);
+        opacity: 1;
+        box-shadow: -4px 3px 14px 11px rgb(231, 205, 58);
+    }
+
+    25% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    56% {
+        transform: translate(110px, -110px);
+        opacity: 0;
+    }
+    57%, 58%{
+        transform: translate(110px, -110px);
+        opacity: .5;
+    }
+    59%, 63% {
+        transform: translate(110px, -110px);
+        opacity: 1;
+        box-shadow: 0 0 8px 15px rgb(231, 205, 58);
+    }
+    66%{
+        transform: translate(110px, -110px);
+        opacity: 1;
+        box-shadow: 3px -3px 14px 11px rgb(231, 205, 58);
+    }
+    69%, 100% {
+        transform: translate(110px, -110px);
+        opacity: 0;
+    }
+}
